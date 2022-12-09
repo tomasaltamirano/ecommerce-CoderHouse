@@ -1,0 +1,343 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Raleway:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    /* max-width: 1000px;
+    margin: 0 auto; */
+    font-family: 'Inter', sans-serif;
+    
+
+} 
+
+.header-container{
+    
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 5px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: #fff;
+    
+}
+
+.header-container .menu{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.nav-btn{
+    text-decoration: none;
+    margin: 10px;
+    color: #000;
+    
+    
+}
+
+.nav-btn:hover{
+    padding-bottom: 4px;
+    border-bottom: 1px solid #000;
+    
+}
+
+.menu .logo{
+    padding: 10px 20px;
+    border: 1px solid #000;
+}
+
+.menu .logo:hover{
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.container-productos .valor-dolar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.valor-dolar .compra span{
+    display: block;
+    font-weight: 600;
+    color: rgb(38, 138, 38);
+}
+
+.valor-dolar .venta span{
+    display: block;
+    font-weight: 600;
+    color: red;
+}
+
+.menu .container-productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu .container-productos .submenu{
+    list-style: none;
+}
+
+.submenu {
+    position: relative;
+    padding: 30px;
+}
+
+.submenu #carrito{
+    display: none;
+    text-align: center;
+}
+
+.lista-carrito{
+    width: 100%;
+}
+
+.vaciar-carrito {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: rgb(249, 250, 210);
+    padding: 20px;
+    min-height: 400px;
+    min-width: 400px;
+}
+
+
+.hero-image{
+    background: url(../img/banner.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    margin-top:80px;
+}
+
+.textos-banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.textos-banner .title-banner{
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+.textos-banner .subtitle-banner{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 30px;
+}
+
+.textos-banner .button-banner{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+}
+
+.textos-banner .button-banner:hover{
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    
+
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fila-productos{
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.fila-productos .columns{
+    width: 100%;
+}
+
+.fila-productos .columns .card {
+    margin-bottom: 20px;
+}
+
+.fila-productos .columns .card img{
+    vertical-align: top;
+    width: 100%;
+}
+
+.fila-productos .info-card{
+    padding: 10px 0;
+}
+
+.info-card .precio{
+    margin: 20px 0;
+}
+
+.info-card .agregar-carrito{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 10px;
+    background: #000;
+    border: 1px solid #000;
+}
+
+.info-card .agregar-carrito:hover{
+    background: #fff;
+    color: #000;
+    transition: all .3s ease;
+    
+}
+
+.contacto{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #9E74F9;
+    margin-top: 40px;
+}
+
+.contacto .marca{
+    padding: 30px;
+    margin: 0 30px;
+}
+
+.contacto .marca-logo{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.contacto .lorem{
+    color: #000;
+    margin-top: 10px;
+    line-height: 1.6;
+
+}
+
+.contacto .redes-contacto{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes-contacto .titulo-redes{
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.redes-contacto .redes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.redes-contacto .redes .icono{
+    width: 10%;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .straff .copy{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tarjetas .tarjetas-img img{
+    width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container{
+        grid-template-columns: 1fr 1fr;
+        
+        width: 80%;
+    }
+
+    .contacto{
+        grid-template-columns: 1fr;
+    }
+}

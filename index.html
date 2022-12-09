@@ -1,169 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce - Bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
+    <title>Straff - e-Commerce</title>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">Logotipo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoMenu" aria-controls="contenidoMenu" aria-expanded="false" aria-label="Mostrar/Ocultar navegacion">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="contenidoMenu">
-                    <!--Enlaces-->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">Inicio</a>
-                        </li>
-                        <!--Dropdown-->
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="submenuProductos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-
-                            <!--Sub-elementos-->
-                            <ul class="dropdown-menu" aria-labelledby="submenuProductos">
-                                <li><a href="#" class="dropdown-item">PC's Armadas</a></li>
-                                <li><a href="#" class="dropdown-item">Celulares y Smartphones</a></li>
-                                <li><a href="#" class="dropdown-item">Notebooks</a></li>
-                                <li><a href="#" class="dropdown-item">Accesorios</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Contactos</a>
-                        </li>
-
-                    </ul>
+    <header class="header-container">
+        <div class="menu">
+            <nav class="nav-container">
+                <a href="#" class="nav-btn">Home</a>
+                <a href="#tienda" class="nav-btn">Tienda</a>
+                <a href="#contacto" class="nav-btn">Contacto</a>
+            </nav>
+            <span class="logo"><p>Straff</p></span>
+            
+            <div class="container-productos">
+                <!-- <div>
+                    <h4 class="cotizacion">Cotizacion dolar</h4>
+                    <div class="valor-dolar">
+                        <p class="compra">Compra: <span>$314</span></p>
+                        <p class="venta">Venta: <span>$319</span></p>
+                    </div>
                     
-                </div>
+                </div> -->
+                <!-- <img src="assets/img/bx-heart.svg" alt=""> -->
+                <ul>
+                    <li class="submenu">
+                            <img src="assets/img/bx-cart.svg" id="img-carrito">
+                            <div id="carrito" class="tabla-carrito">
+                                    
+                                    <table id="lista-carrito" class="lista-carrito">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="vaciar-carrito">Vaciar Carrito</a>
+                            </div>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
     </header>
+    <div class="hero-image">
+        <div class="textos-banner">
+            <h3 class="title-banner">los mejores productos en un solo lugar</h3>
+            <p class="subtitle-banner">y al mejor precio</p>
+            <a href="#" class="button-banner">productos</a>
+        </div>
+    </div>
 
-    <main class="container mt-3">
-        <div class="row py-5">
-            <div class="col">
-                <div class="border-bottom">
-                    <h1 class="text-center">Tienda virtual</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/1.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Iphone</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary" >Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+    <div class="texto">
+        <h2 class="title-main">New Arrivals</h2>
+    </div>
+
+    <!-- <main class="main-container"> -->
+        <section class="main-container" id="tienda">
+
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/campera.jpg"  alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$1200</p>
+                        <a href="#" class="agregar-carrito" data-id="1">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/2.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Mac</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/remera1.jpg"  alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$300</p>
+                        <a href="#" class="agregar-carrito" data-id="2">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/3.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Camara</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/sombrero.jpg" alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$100</p>
+                        <a href="#" class="agregar-carrito" data-id="3">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/4.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Smartwatch</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/remera2.jpg"  alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$300</p>
+                        <a href="#" class="agregar-carrito" data-id="4">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/5.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Teclado</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+            
+
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/remera3.jpg"  alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$300</p>
+                        <a href="#" class="agregar-carrito" data-id="5">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/6.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Tablet</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/f3.jpg"  alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$2200</p>
+                        <a href="#" class="agregar-carrito" data-id="6">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/7.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Monitor</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/vestido.jpg"  alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$1200</p>
+                        <a href="#" class="agregar-carrito" data-id="7">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-5">
-                <div class="card">
-                    <img src="img/8.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Camara analogica</h3>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+            <div class="fila-productos">
+                <div class="columns">
+                    <div class="card">
+                        <img src="assets/img/cartera.jpg"  alt="" class="imagen-producto">
+                    </div>
+                    <div class="info-card">
+                        <h4>Campera Jean</h4>
+                        <p class="precio">$4400</p>
+                        <a href="#" class="agregar-carrito" data-id="8">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </section>
+
+
+       <section class="contacto" id="contacto">
+            <div class="marca">
+                <h4 class="marca-logo">Straff</h4>
+                <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur est exercitationem blanditiis officiis in error modi molestias incidunt sunt aliquam, explicabo, maxime ducimus soluta sequi neque vel? Inventore, voluptatibus ipsa.</p>
+            </div>
+            <div class="redes-contacto">
+                <h4 class="titulo-redes">Seguinos en las redes</h4>
+                <div class="redes">
+                    <a href="https://www.instagram.com/"><box-icon type='logo' size="md" color="white" animation="tada-hover" name='instagram'></box-icon></a>
+                    
+                    <a href="https://twitter.com/home"><box-icon name='twitter' type='logo' size="md" color="white" animation="tada-hover"></box-icon></a>
+
+                    <a href="https://www.linkedin.com/feed/"><box-icon name='linkedin-square' type='logo' size="md" color="white" animation="tada-hover"></box-icon></a>
+                </div>
+            </div>
+       </section>
     </main>
-
-    <footer class="container bg-dark text-light">
-        <div class="row border-top py-3 justify-content-between">
-            <div class="col-auto text-center">
-                <h3 class="lead text">Tomas Altamirano</h3>
-                <a href="https://github.com/tomasaltamirano" target="_blank" class="btn btn-link text-light">Acerca de</a>
-                <a href="https://www.linkedin.com/in/tomasaltamirano/" target="_blank" class="btn btn-link text-light">Contacto</a>
+    <footer class="footer">
+        <div class="straff">
+            <h4 class="copy">&copy Straff 2022</h4>
+        </div>
+        <div class="tarjetas">
+            <div class="tarjetas-img">
+                <img src="assets/img/visa.png" alt="">
+                <img src="assets/img/mastercard.png" alt="">
+                <img src="assets/img/mercadopago.png" alt="">
+                <img src="assets/img/american.png" alt="">
+                <img src="assets/img/pagofacil.png" alt="">
             </div>
-            <div class="col-auto">
-                <a href="#" class="btn btn-link text-light">Subir</a>
-            </div>
+        </div>
+        <div class="back-top">
+            <a href="#"><box-icon name='up-arrow-circle' color="white" size="md"></box-icon></a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    
 
-    <script src="js/main.js"></script>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>
