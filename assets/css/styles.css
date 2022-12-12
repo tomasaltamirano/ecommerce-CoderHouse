@@ -9,6 +9,7 @@
 
 html{
     scroll-behavior: smooth;
+    
 }
 
 
@@ -35,6 +36,7 @@ body{
     top: 0;
     position: fixed;
     background: #fff;
+    font-size: 16px;
     
 }
 
@@ -125,8 +127,7 @@ body{
 .submenu:hover #carrito{
     display: block;
     position: absolute;
-    right:0;
-
+    left: -100%;
     top:100%;
     z-index: 1;
     background-color: rgb(249, 250, 210);
@@ -162,6 +163,7 @@ body{
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+    text-align: center;
     
 }
 
@@ -195,6 +197,7 @@ body{
     display: flex;
     justify-content: center;
     margin: 50px auto;
+    font-size: 18px;
 
 }
 
@@ -235,8 +238,13 @@ body{
     padding: 10px 0;
 }
 
+.info-card h4{
+    font-size: 15px;
+}
+
 .info-card .precio{
     margin: 20px 0;
+    font-size:14px;
 }
 
 .info-card .agregar-carrito{
@@ -245,6 +253,7 @@ body{
     padding: 10px 10px;
     background: #000;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .info-card .agregar-carrito:hover{
@@ -266,7 +275,7 @@ body{
 }
 
 .contacto .marca{
-    padding: 30px;
+    padding: 10px;
     margin: 0 30px;
 }
 
@@ -279,6 +288,7 @@ body{
     color: #000;
     margin-top: 10px;
     line-height: 1.6;
+    font-size: 16px;
 
 }
 
@@ -333,11 +343,83 @@ body{
 @media screen and (max-width: 768px) {
     .main-container{
         grid-template-columns: 1fr 1fr;
-        
-        width: 80%;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .info-card .agregar-carrito{
+        font-size: 14px;
+    }
+
+    .nav-container{
+       
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .header-container .menu{
+        grid-template-columns: 1fr;
     }
 
     .contacto{
         grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .contacto .marca{
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .contacto .marca-logo{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .contacto .titulo-redes{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .footer .tarjetas-img{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 375px){
+    .main-container{
+        width: 90%;
+        gap: 10px;
+    }
+
+    .info-card .agregar-carrito{
+        font-size: 12px;
+    }
+
+    .contacto{
+        padding: 20px;
+    }
+
+    .contacto .marca{
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .contacto .marca-logo{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .contacto .titulo-redes{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .footer .tarjetas-img{
+        text-align: center;
     }
 }
